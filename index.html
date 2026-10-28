@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>AASIF BHAI PRO | PERSISTENT ONLINE CORE</title>
+<style>
+:root{--bg:#020408;--panel:#0a0f18;--line:#1a2333;--gold:#f5c85b;--cyan:#00f2fe;--muted:#8994a8;--white:#f4f7ff;--red:#ff2a5f}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0%,#0f172a 0,transparent 60%),var(--bg);color:var(--white);font-family:Inter,system-ui,sans-serif;padding:10px}
+.app{max-width:480px;margin:0 auto}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin:4px 2px 12px}
+.brand{font-size:11px;letter-spacing:2px;font-weight:900}.brand span{color:var(--gold)}
+.vip-badge{font-size:9px;color:#fff;background:linear-gradient(135deg,#ff2a5f,#ff7e5f);border-radius:20px;padding:4px 10px;font-weight:900;letter-spacing:1px;box-shadow:0 0 20px rgba(255,42,95,0.6)}
+.profile{position:relative;overflow:hidden;display:flex;align-items:center;gap:12px;padding:14px;border:1px solid rgba(255,42,95,0.4);border-radius:18px;background:linear-gradient(135deg,#2b0d1a,#0a0f18 60%,#1a0a10);box-shadow:0 10px 30px rgba(0,0,0,0.8)}
+.profile:after{content:"PRO";position:absolute;right:-5px;bottom:-18px;font-size:55px;font-weight:1000;color:rgba(255,255,255,0.03);letter-spacing:-2px}
+.kicker{color:var(--red);font-size:8px;font-weight:900;letter-spacing:1.5px}
+.name{font-size:20px;font-weight:950;margin:2px 0;letter-spacing:-0.5px}
+.desc{color:var(--muted);font-size:10px}
+
+.sectionhead{display:flex;align-items:center;justify-content:space-between;margin:14px 2px 6px}
+.sectionhead h2{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;margin:0;color:var(--muted)}
+.sectionhead span{color:#10b981;font-size:10px;font-weight:800}
+
+.main-card{margin-top:4px;padding:16px;border-radius:18px;border:1px solid rgba(255,42,95,0.5);background:linear-gradient(145deg,#160b14,#080b12);text-align:center;position:relative;overflow:hidden}
+.main-card:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,0.02) 50%,transparent 70%);pointer-events:none}
+
+.sub-period{background:#04060a;border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.sub-period span{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.sub-period strong{font-size:14px;color:var(--gold);font-family:monospace;letter-spacing:0.5px}
+
+.timer-box{display:flex;justify-content:space-between;align-items:center;background:#04060a;border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:14px}
+.timer-box span{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.timer-box strong{font-size:18px;color:var(--cyan);font-family:monospace}
+
+.signal-display{font-size:48px;font-weight:1000;line-height:1.1;color:var(--red);text-shadow:0 0 30px rgba(255,42,95,0.6);margin:8px 0}
+.signal-display.pop{animation:pop 0.3s ease}
+@keyframes pop{0%{transform:scale(0.7);opacity:0.3}100%{transform:scale(1);opacity:1}}
+
+.meta-tags{display:flex;justify-content:center;gap:6px;margin-bottom:14px;flex-wrap:wrap}
+.pill{background:rgba(255,42,95,0.08);border:1px solid rgba(255,42,95,0.3);border-radius:10px;padding:6px 10px;font-size:10px;font-weight:800;color:var(--white)}
+.pill strong{color:var(--red)}
+
+.main-btn{width:100%;border:0;border-radius:12px;padding:14px;font-size:12px;letter-spacing:1px;font-weight:950;cursor:pointer;background:linear-gradient(100deg,#ff2a5f,#ff7e5f);color:#fff;box-shadow:0 8px 25px rgba(255,42,95,0.5)}
+.main-btn:active{transform:scale(0.98)}
+
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.card{border:1px solid var(--line);background:var(--panel);border-radius:14px;padding:12px;text-align:center}
+.card .lbl{color:var(--muted);font-size:8px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.card .val{font-size:14px;font-weight:900;margin-top:4px}
+
+.history-row{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;margin-top:6px}
+.h-chip{min-width:55px;text-align:center;padding:8px 6px;border-radius:10px;border:1px solid var(--line);background:var(--panel);font-size:11px;font-weight:900;color:var(--red);flex-shrink:0}
+
+.foot{text-align:center;color:var(--muted);font-size:8px;letter-spacing:1px;padding:14px 0 6px}
+</style>
+</head>
+<body>
+<main class="app">
+  <div class="topbar">
+    <div class="brand">AASIF <span>✦</span> BHAI PRO</div>
+    <div class="vip-badge">PERSISTENT ONLINE V1</div>
+  </div>
+
+  <section class="profile">
+    <div>
+      <div class="kicker">ONLINE ANCHORED CORE</div>
+      <div class="name">Aasif Hussain</div>
+      <div class="desc">WinGo 30s • Auto-Sync & Persistent</div>
+    </div>
+  </section>
+
+  <div class="sectionhead">
+    <h2>Live Running Period</h2>
+    <span id="net-status" style="color:#10b981">● Fully Active</span>
+  </div>
+
+  <div class="main-card">
+    <div class="sub-period">
+      <span>Current Period (Matched)</span>
+      <strong id="current-period">Loading...</strong>
+    </div>
+
+    <div class="timer-box">
+      <span>Draw Countdown</span>
+      <strong id="timer-sec">00:30</strong>
+    </div>
+
+    <div style="font-size:9px; color:var(--muted); text-transform:uppercase; letter-spacing:1.2px;">SYSTEM FAAD RESULT</div>
+    <div class="signal-display" id="signal-box">--</div>
+
+    <div class="meta-tags">
+      <div class="pill">Anchor: <strong>8:39 (51819)</strong></div>
+      <div class="pill">Status: <strong style="color:var(--gold)">ONLINE SYNC</strong></div>
+    </div>
+
+    <button class="main-btn" onclick="generatePersistentSignal()">GENERATE ONLINE SIGNAL</button>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="lbl">Storage State</div>
+      <div class="val" style="color:var(--cyan)">Saved (Local)</div>
+    </div>
+    <div class="card">
+      <div class="lbl">Engine Status</div>
+      <div class="val gold">Continuous</div>
+    </div>
+  </div>
+
+  <div class="sectionhead" style="margin-top:14px;">
+    <h2>Saved History</h2>
+    <span>Persistent Log</span>
+  </div>
+  <div class="history-row" id="history-box">
+    <div class="h-chip" style="color:var(--muted); width:100%; text-align:center;">No signals yet...</div>
+  </div>
+
+  <div class="foot">AASIF BHAI PRO © 2026-2027 • PERSISTENT STUDIO</div>
+</main>
+
+<script>
+// Load saved history from localStorage if available
+let historyArray = JSON.parse(localStorage.getItem('aasif_history') || '[]');
+let totalCount = parseInt(localStorage.getItem('aasif_count') || '0');
+
+function updatePeriodAndTimer() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  
+  const totalSecondsToday = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+  
+  // Exact Anchor: 8:39 PM = Base Period Index 51819
+  const baseSeconds = (20 * 3600) + (39 * 60);
+  const basePeriodIndex = 51819;
+  
+  const elapsedFromBase = totalSecondsToday - baseSeconds;
+  const currentPeriodIndex = basePeriodIndex + Math.floor(elapsedFromBase / 30);
+  
+  const currentPeriodStr = `${year}${month}${day}1000${currentPeriodIndex}`;
+  document.getElementById('current-period').innerText = currentPeriodStr;
+
+  const secRemaining = 30 - ((elapsedFromBase % 30 + 30) % 30);
+  const formattedSec = secRemaining < 10 ? '0' + secRemaining : secRemaining;
+  document.getElementById('timer-sec').innerText = `00:${formattedSec}`;
+}
+
+setInterval(updatePeriodAndTimer, 1000);
+updatePeriodAndTimer();
+
+// Render initial history if present
+function renderHistory() {
+  const historyBox = document.getElementById('history-box');
+  if(historyArray.length > 0) {
+    historyBox.innerHTML = historyArray.map(item => `<div class="h-chip">${item}</div>`).join('');
+  }
+}
+renderHistory();
+
+function generatePersistentSignal() {
+  const btn = document.querySelector('.main-btn');
+  const box = document.getElementById('signal-box');
+  const historyBox = document.getElementById('history-box');
+  const periodStr = document.getElementById('current-period').innerText;
+
+  btn.disabled = true;
+  btn.innerText = "CALCULATING ONLINE...";
+
+  setTimeout(() => {
+    let hash = 2166136261;
+    for (let i = 0; i < periodStr.length; i++) {
+      hash ^= periodStr.charCodeAt(i);
+      hash = Math.imul(hash, 16777619);
+    }
+    
+    const tailDigit = parseInt(periodStr.slice(-2));
+    const num = (Math.abs(hash) + (tailDigit * 17) + Date.now()) % 10;
+    const size = num >= 5 ? "BIG" : "SMALL";
+    const resultText = `${num} • ${size}`;
+
+    box.innerText = resultText;
+    box.classList.remove('pop');
+    void box.offsetWidth;
+    box.classList.add('pop');
+
+    totalCount++;
+    historyArray.unshift(`${periodStr.slice(-4)}: ${num}(${size[0]})`);
+    if(historyArray.length > 8) historyArray.pop();
+
+    // Save state to localStorage so it stays safe even if closed for hours
+    localStorage.setItem('aasif_history', JSON.stringify(historyArray));
+    localStorage.setItem('aasif_count', totalCount);
+    
+    historyBox.innerHTML = historyArray.map(item => `<div class="h-chip">${item}</div>`).join('');
+
+    btn.disabled = false;
+    btn.innerText = "GENERATE ONLINE SIGNAL";
+  }, 150);
+}
+</script>
+</body>
+</html>
